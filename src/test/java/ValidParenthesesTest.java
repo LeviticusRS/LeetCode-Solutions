@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ValidParenthesesTest {
 
     @Test
-    void testTwoSwum() {
+    void testValidParentheses() {
         var validParentheses = new ValidParentheses();
         var string = "()";
 
