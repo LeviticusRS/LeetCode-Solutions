@@ -1,20 +1,22 @@
 package org.joshua.ransom.solutions;
 
+import org.joshua.ransom.TwoParameterSolution;
+
 import java.util.ArrayList;
-import java.util.List;
 
-public class TwoSum {
+public class TwoSum implements TwoParameterSolution<int[], int[], Integer> {
 
-    public int[] twoSumBruteForce(int[] nums, int target) {
-        List<Integer> result = new ArrayList<>();
-        for(int i = 0; i < nums.length; i++) {
-            for(int j = 0; j < nums.length; j++) {
+    @Override
+    public int[] bruteForce(int[] input, Integer target) {
+        var result = new ArrayList<Integer>();
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input.length; j++) {
                 if (i == j || result.contains(i) || result.contains(j)) {
                     continue;
                 }
 
-                int valueOne = nums[i];
-                int valueTwo = nums[j];
+                var valueOne = input[i];
+                var valueTwo = input[j];
 
                 if (valueOne + valueTwo == target) {
                     result.add(i);

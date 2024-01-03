@@ -7,13 +7,13 @@ public class TwoSumTest {
 
     @Test
     void testTwoSwum() {
-        TwoSum twoSum = new TwoSum();
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
+        var twoSum = new TwoSum();
+        var nums = new int[]{2, 7, 11, 15};
+        var target = 9;
 
-        int[] result = twoSum.twoSumBruteForce(nums, target);
+        var result = twoSum.bruteForce(nums, target);
 
-        int[] expected = {0, 1};
+        var expected = new int[]{0, 1};
         assertArrayEquals(expected, result);
     }
 }
